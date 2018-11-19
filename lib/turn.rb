@@ -8,37 +8,37 @@ end
 
 def valid_move?(board, index)
   if position_taken?(board, index) || index < 0 || index > 8
-    false 
-  else 
-    true 
+    false
+  else
+    true
   end
 end
 
 def position_taken?(board, index)
-  if board[index] == " " || board[index] == "" || board[index] == nil 
-    false 
-  else 
-    true 
-  end 
+  if board[index] == " " || board[index] == "" || board[index] == nil
+    false
+  else
+    true
+  end
 end
 
 def move(board, index, character="X")
   board[index] = character
-end 
+end
 
 def turn(board)
   puts "Please enter 1-9:"
-  
+
   index = input_to_index(gets.strip)
   if valid_move?(board, index)
     move(board, index)
     display_board(board)
-  else 
+  else
     puts "Invalid move!! Enter again!!"
     turn(board)
-  end 
+  end
 end
 
 def input_to_index(index)
-  index.to_i - 1 
-end 
+  index.to_i - 1
+end
