@@ -9,5 +9,5 @@ end
 
 #turn method
 def turn(board)
-  puts "Please enter 1-9"
+  puts "Please enter 1-9:"
 end
